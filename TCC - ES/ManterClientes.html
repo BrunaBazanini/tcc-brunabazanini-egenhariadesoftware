@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doggis - Clientes</title>
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	
+  </head>
+
+  <body>
+		<!-- MENU -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand" href="#">DOGGIS PETS</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+		  
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="#">Venda</a></li>
+				<li class="nav-item active"><a class="nav-link" href="ManterClientes.html">Clientes <span class="sr-only">(current)</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="#">PETS</a></li>
+				<li class="nav-item"><a class="nav-link" href="AgendarServicos.html">Serviços</a></li>
+				<li class="nav-item"><a class="nav-link" href="GerenciarProdutos.html">Produtos</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Estoque</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>				
+				<li class="nav-item"><a class="nav-link" href="#">Funcionários</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Relatórios</a></li>
+			</ul>
+		  </div>
+		</nav>
+		<!-- FIM MENU -->
+		
+		<!-- CAMPOS CLIENTES -->
+		<section class = "container-fluid">
+			<section class = "row justify-content-center">
+				<section class = 'col-6 col-sm-10 col-md-10'>
+					<form class = "form-container">	
+						
+						<!-- PRIMEIRA LINHA -->
+						<div class="form-row">		
+							<div class="form-group col-md-2">
+								<label for="inputCodCliente">COD Cliente</label>
+								<input type="text" class="form-control" id="inputCodCliente" disabled="">
+							</div>
+							
+							<div class="form-group col-md-4">
+								<label for="inputNomeCliente">Nome Cliente</label>
+								<input type="text" class="form-control" id="inputNomeCliente" placeholder="Nome Cliente">
+							</div>
+							
+							<div class="form-group col-md-2">
+								<label for="inputPatazAcumuladas">Pataz Acumuladas</label>
+								<input type="text" class="form-control" id="inputPatazAcumuladas" disabled="">
+							</div>
+							
+							<div class="form-group col-md-2">
+								<label for="inputCpfCliente">CPF</label>
+								<input type="text" class="form-control" id="inputCpfCliente" placeholder="000.000.000-00" onkeypress="$(this).mask('000.000.000-00');">
+							</div>
+							
+							<div class="form-group col-md-2">
+								<label for="inputRgfCliente">RG</label>
+								<input type="text" class="form-control" id="inputRgfCliente" placeholder="00.000.000-0" onkeypress="$(this).mask('00.000.000-00');">
+							</div>
+						</div>
+						<!-- FIM PRIMEIRA LINHA -->
+						
+						<!-- SEGUNDA LINHA -->
+						<div class="form-row">	
+							<div class="form-group col-md-6">
+								<label for="inputEmail">Email</label>
+								<input type="email" class="form-control" id="inputEmail" placeholder="email@email.com">
+							</div>
+							
+							<div class="form-group col-md-6">
+								<label for="inputEndereco">Endereço</label>
+								<input type="text" class="form-control" id="inputEndereco" placeholder="Rua dos Lirios, nº 0, Bairro Água">
+							</div>
+						</div>
+						<!-- FIM SEGUNDA LINHA -->
+						
+						<!-- BOTÕES PARA CADASTRAR / PESQUISAR / EDITAR / EXCLUIR -->
+						<div class="form-row">	
+							<div class="btn-group btn-group-toggle data-toggle=buttons">
+								<label class="btn btn-success">
+								<input type="radio" name="options" id="option1" autocomplete="off"> Cadastrar</label>
+								
+								<label class="btn btn-info">
+								<input type="radio" name="options" id="option2" autocomplete="off"> Pesquisar </label>
+								
+								<label class="btn btn-warning">
+								<input type="radio" name="options" id="option2" autocomplete="off"> Editar </label>
+								
+								<label class="btn btn-danger">
+								<input type="radio" name="options" id="option3" autocomplete="off"> Excluir </label>
+							</div>
+						</div>
+						<!-- FIM DOS BOTÕES CADASTRAR / PESQUISAR / EDITAR / Excluir -->
+						
+						<br><br>
+						
+						<!-- TERCEIRA LINHA -->
+						<div class="form-row">	
+							<div class="form-group col-md-2">
+								<label for="inputCodPet">COD Pet</label>
+								<input type="text" class="form-control" id="inputCodPet" disabled="">
+							</div>
+							
+							<div class="form-group col-md-4">
+								<label for="inputNomePet">Nome Pet 1</label>
+								<input type="text" class="form-control" id="inputNomePet" disabled="">
+							</div>
+							
+							<div class="form-group col-md-2">
+								<label for="inputTipoPet">Tipo Pet</label>
+								<input type="text" class="form-control" id="inputTipoPet" disabled="">
+							</div>
+							
+							<div class="form-group col-md-2">
+								<label for="inputRacaPet">Raça Pet</label>
+								<input type="text" class="form-control" id="inputRacaPet" disabled="">
+							</div>
+							
+							<div class = "col-md-2">
+								<label class="form-check-label" for="defaultCheck1">Aceita divulgar fotos</label>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+									<label class="form-check-label" for="inlineRadio1">Sim</label>
+								</div>
+								
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+									<label class="form-check-label" for="inlineRadio2">Não</label>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-row">	
+							<div class="form-group col-md-2">
+								<label for="inputCodPet">COD Pet</label>
+								<input type="text" class="form-control" id="inputCodPet" disabled="">
+							</div>
+							
+							<div class="form-group col-md-4">
+								<label for="inputNomePet">Nome Pet 2</label>
+								<input type="text" class="form-control" id="inputNomePet" disabled="">
+							</div>
+							
+							<div class="form-group col-md-2">
+								<label for="inputTipoPet">Tipo Pet</label>
+								<input type="text" class="form-control" id="inputTipoPet" disabled="">
+							</div>
+							
+							<div class="form-group col-md-2">
+								<label for="inputRacaPet">Raça Pet</label>
+								<input type="text" class="form-control" id="inputRacaPet" disabled="">
+							</div>
+							
+							<div class = "col-md-2">
+								<label class="form-check-label" for="defaultCheck1">Aceita divulgar fotos</label>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+									<label class="form-check-label" for="inlineRadio1">Sim</label>
+								</div>
+								
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+									<label class="form-check-label" for="inlineRadio2">Não</label>
+								</div>
+							</div>
+						</div>
+						
+						<!-- FIM TERCEIRA LINHA -->
+						
+					</form>
+				</section>
+			</section>
+		</section>
+		<!-- FIM CAMPOS CLIENTES -->
+		
+  </body>
+</html>

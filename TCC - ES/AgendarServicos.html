@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doggis - Agendar Serviços</title>
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	
+  </head>
+
+  <body>
+		<!-- MENU -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand" href="#">DOGGIS PETS</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+		  
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="#">Venda</a></li>				
+				<li class="nav-item"><a class="nav-link" href="ManterClientes.html">Clientes</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">PETS</a></li>
+				<li class="nav-item active"><a class="nav-link" href="AgendarServicos.html">Serviços<span class="sr-only">(current)</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="GerenciarProdutos.html">Produtos</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Estoque</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>		
+				<li class="nav-item"><a class="nav-link" href="#">Funcionários</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Relatórios</a></li>				
+			</ul>
+		  </div>
+		</nav>
+		<!-- FIM MENU -->
+		
+		<!-- CAMPOS PARA AGENDAR SERVIÇO -->
+		<section class = "container-fluid">
+			<section class = "row justify-content-center">
+				<section class = 'col-6 col-sm-10 col-md-10'>
+					<form class = "form-container">
+					
+						<div class="form-row">
+							<div class="form-group col-md-2">
+								<label for="inputCodCliente">Cod Cliente</label>
+								<input type="text" class="form-control" id="inputCodCliente" disabled="">
+							</div>							
+							<div class="form-group col-md-4">
+								<label for="inputNomeCliente">Nome Cliente</label>
+								<input type="text" class="form-control" id="inputNomeCliente" placeholder="Nome Cliente">
+							</div>
+							<div class="form-group col-md-2">
+								<label for="inputCodPet">Cod Pet</label>
+								<input type="text" class="form-control" id="inputCodPet" disabled="">
+							</div>							
+							<div class="form-group col-md-4">
+								<label for="inputNomePet">Nome Pet </label>
+								<input type="text" class="form-control" id="inputNomePet" placeholder="Nome do Pet">
+							</div>
+						</div>
+					
+						<div class="form-row">			  
+							<div class="form-group col-md-2">
+								<label for="inputCodServico">Cod Serviço</label>
+								<input type="text" class="form-control" id="inputCodServico" disabled="">
+							</div>
+							<div class="form-group col-md-2">
+								<label for="inputPatazServico">Pataz Serviço</label>
+								<input type="text" class="form-control" id="inputPatazServico" disabled="">
+							</div>
+							<div class="form-group  col-md-4">
+								<label for="inputTipoServico">Tipo de Serviço</label>
+								<select class="form-control" id="inputTipoServico">
+									<option>Selecione 1 Serviço</option>
+									<option>Banho</option>	
+									<option>Banho & Tosa</option>	
+									<option>Consulta</option>	
+									<option>Tosa</option>							  
+									<option>Vacina</option>									  
+									<option>Outros</option>
+								</select>
+							</div>
+							<div class="form-group  col-md-4">
+								<label for="inputProdutoUtilizado">Produto Utilizado</label>
+								<select multiple class="form-control" id="inputProdutoUtilizado">
+								  <option>Selecione 1 Produto</option>								  						  
+								  <option>Condicionador</option>						  
+								  <option>Shampoo</option>		
+								  <option>Vacina tipo 1</option>									  
+								  <option>Outros</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="form-row">
+							<div class="form-group col-md-3">								
+								<label for="inputNomePet">Data do Serviço</label>
+								<input id="date" type="Date">
+							</div>
+							<div class="form-group col-md-2">
+								<label for="inputTempoServico">Das</label>
+								<select class="form-control" id="inputTempoServico">
+									<option>09:00</option>
+									<option>10:00</option>
+									<option>13:00</option>	
+								</select>
+							</div>
+							<div class="form-group col-md-2">
+								<label for="inputTempoServico">As</label>
+								<select class="form-control" id="inputTempoServico">
+									<option>10:00</option>
+									<option>11:00</option>
+									<option>14:00</option>	
+								</select>
+							</div>
+							<div class="form-group col-md-4">
+								<label for="inputFuncionarioDisponivel">Funcionário Disponível</label>
+								<select class="form-control" id="inputFuncionarioDisponivel">
+									<option>Selecione 1 Funcionário Disponível</option>
+									<option>Bruna</option>	
+									<option>Fernanda</option>	
+									<option>Everton</option>	
+								</select>
+							</div>
+						</div>
+						
+						<div class="form-row">
+							<div class="form-group col-md-3">								
+								<label for="inputValorFinalServico">Valor final do Serviço</label>
+								<input type="text" class="form-control" id="inputValorFinalServico" disabled>
+							</div>
+						</div>
+						
+						<div class="form-row">
+							<div class="btn-group btn-group-toggle data-toggle=buttons">
+								<label class="btn btn-success">
+								<input type="radio" name="options" id="option1" autocomplete="off"> Agendar</label>
+								
+								<label class="btn btn-info">
+								<input type="radio" name="options" id="option2" autocomplete="off"> Consultar </label>
+							</div>
+						</div>
+					</form>
+				</section>
+			</section>
+		</section>
+  </body>
+</html>
